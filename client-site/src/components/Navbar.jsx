@@ -27,7 +27,8 @@ const Navbar = () => {
   return (
     <>
       <section className="shadow fixed left-0 w-full z-20 top-0 backdrop-blur bg-gray-50 bg-opacity-15 px-5 py-5">
-        <nav className="flex justify-between items-center">
+       <div className="container px-2 md:px-5  mx-auto">
+       <nav className="flex justify-between items-center">
           <div>
             <Link className={`logo flex items-center`} to="/">
              <img className="h-[30px] md:h-[40px] mr-2" src={logoIcon} alt="logo" />
@@ -127,6 +128,7 @@ const Navbar = () => {
           </div>
           </div>
         </nav>
+       </div>
       </section>
     </>
   );

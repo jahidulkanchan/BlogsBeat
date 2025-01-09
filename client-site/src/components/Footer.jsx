@@ -6,7 +6,7 @@ import { useAuth } from "../hooks/useAuth";
 const Footer = () => {
   const {isdark} = useAuth()
   return (
-    <footer className={` px-5 py-5`}>
+    <footer className={`container mx-auto px-5 py-5`}>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         <div className="col-span-2">
         <Link onClick={()=> window.scrollTo(0,0)} className={`logo flex items-center ${isdark ? 'text-white' : ''}`} to="/">

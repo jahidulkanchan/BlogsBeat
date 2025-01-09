@@ -16,11 +16,6 @@ const AllBlogs = () => {
   const itemPerPage = 6;
   const count = countData?.length
   const numberOfPages = Math.ceil(count/itemPerPage);
-  // const pages = []
-  // for(let i = 0; i < numberOfPages; i++) {
-  //   pages.push(i)
-  // }
-  // console.log(pages);
   const pages = [...Array(numberOfPages).keys()];
   useEffect(()=> {
     const fetchAllBlogs = async() =>{
@@ -78,7 +73,8 @@ const AllBlogs = () => {
            : blogs.map(blog => <BlogCard blog={blog} key={blog?._id}></BlogCard>)}
           
         </div>
-        <div className="pagination flex justify-center gap-2 md:gap-5">
+        {blogs.length === 0 && <p className='text-center text-xl text-secondary my-[100px]'>Blogs Not Found</p>} 
+        {blogs.length > 0 && <div className="pagination flex justify-center gap-2 md:gap-5">
         <button
           onClick={() => currentPage > 0 && setCurrentPage(currentPage - 1)}
           className="px-5 py-1 border border-primary text-primary hover:bg-darkPrimary hover:text-white"
@@ -100,7 +96,7 @@ const AllBlogs = () => {
   >
     Next
   </button>
-        </div>
+        </div>}
 
       </section>
     </>
