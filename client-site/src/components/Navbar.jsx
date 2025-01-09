@@ -52,17 +52,19 @@ const Navbar = () => {
                     `${isActive ? "text-secondary" : ""} hover:text-secondary duration-100 flex justify-center items-center gap-1`
                   }
                   to="/">Home</NavLink></li>
-              <li onClick={()=>{
-                setIsShow(!isShow)
-                window.scrollTo(0,0)
-              }}>
-                <NavLink
-                  className={({ isActive }) =>
-                    `${isActive ? "text-secondary" : ""} hover:text-secondary duration-100 flex justify-center items-center gap-1`
-                  }
-                  to="/add-blog"
-                >Add Blog</NavLink>
-              </li>
+              {user && 
+                <li onClick={()=>{
+                  setIsShow(!isShow)
+                  window.scrollTo(0,0)
+                }}>
+                  <NavLink
+                    className={({ isActive }) =>
+                      `${isActive ? "text-secondary" : ""} hover:text-secondary duration-100 flex justify-center items-center gap-1`
+                    }
+                    to="/add-blog"
+                  >Add Blog</NavLink>
+                </li>
+              }
               <li onClick={()=>{
                 setIsShow(!isShow)
                 window.scrollTo(0,0)
@@ -85,17 +87,19 @@ const Navbar = () => {
                   to="/features"
                 >Featured Blogs</NavLink>
               </li>
-              <li onClick={()=>{
-                setIsShow(!isShow)
-                window.scrollTo(0,0)
-              }}>
-                <NavLink
-                  className={({ isActive }) =>
-                    `${isActive ? "text-secondary" : ""} hover:text-secondary duration-100 flex justify-center items-center gap-1`
-                  }
-                  to="/wishlist"
-                >Wishlist</NavLink>
-              </li>
+              {user && 
+                <li onClick={()=>{
+                  setIsShow(!isShow)
+                  window.scrollTo(0,0)
+                }}>
+                  <NavLink
+                    className={({ isActive }) =>
+                      `${isActive ? "text-secondary" : ""} hover:text-secondary duration-100 flex justify-center items-center gap-1`
+                    }
+                    to="/wishlist"
+                  >Wishlist</NavLink>
+                </li>
+              }
             </ul>
           </div>
           <div className="user-info flex gap-5 items-center">

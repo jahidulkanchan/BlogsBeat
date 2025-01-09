@@ -54,8 +54,8 @@ export const router = createBrowserRouter([
       }
     ],
     errorElement:  <div className="min-h-screen text-xl flex flex-col justify-center items-center">
-    <p>🚫 This page not found (404) 🙄</p>
-    <small className="bg-slate-100 px-5 py-1 mt-4">
+    <p><img src="/Error-404.webp" alt="" /></p>
+    <small className="bg-slate-200 px-5 py-1 mt-4">
       <Link to="/">Go Back</Link>
     </small>
   </div>

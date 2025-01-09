@@ -56,7 +56,7 @@ const BlogCard = ({ blog }) => {
         <img
         src={photo}
         alt={title}
-        className="w-full h-48 object-cover"
+        className="w-full h-48 hover:scale-105 duration-300 object-cover"
           />
         </PhotoView>
        </PhotoProvider>
