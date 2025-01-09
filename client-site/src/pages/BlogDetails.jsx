@@ -72,7 +72,7 @@ const BlogDetails = () => {
             </div>
             <p className="text-white text-center ml-auto py-1 md:py-2 mb-5 h-fit px-8 rounded-full bg-violet-700">{category}</p>
           </div>
-          <img src={photo} alt={title} className="w-full h-[200px] object-cover mb-4" />
+          <img src={photo} alt={title} className="w-full h-[200px] md:h-[300px] object-cover mb-4" />
           <div>
             <p className="flex flex-col text-gray-600"><span className="text-lg text-black">Short Description:</span> {shortDesc}</p>
             <p className="flex flex-col text-gray-600 mb-2"><span className="text-lg text-black">Long Description:</span> {longDesc}</p>
