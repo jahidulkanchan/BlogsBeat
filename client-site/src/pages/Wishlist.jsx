@@ -162,6 +162,7 @@ const Wishlist = () => {
                     </tr>
                   ))}
             </tbody>
+            { wishlist.length === 0 && <p className="py-5 absolute left-0 text-center w-full text-lg">Your Wishlist is Empty</p>}
           </table>
         </div>
       </section>
