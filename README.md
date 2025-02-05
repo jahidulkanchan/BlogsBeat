@@ -4,7 +4,7 @@
 BlogBeat is a dynamic blog web application that allows users to explore engaging content across categories like Technology, Travel, Sports, Entertainment, and Lifestyle. Users can add their own blogs, manage existing ones, and curate a personalized wishlist of their favorite posts. The platform aims to inspire, educate, and entertain while fostering a community where everyone can share and discover meaningful content.
 
 ## Screenshot
-![BlogBeat Screenshot](your-screenshot-url-here)
+![BlogBeat Screenshot](https://your-image-url.com/image.png)
 
 ## Technologies Used
 - React.js
@@ -32,7 +32,7 @@ BlogBeat is a dynamic blog web application that allows users to explore engaging
 ## How to Run the Project Locally
 1. **Clone the Repository:**
    ```sh
-   git clone https://github.com/your-username/your-repo.git
+   git clone [https://github.com/your-username/your-repo.git](https://github.com/jahidulkanchan/BlogsBeat.git)
    cd your-repo
    ```
 2. **Install Dependencies:**
