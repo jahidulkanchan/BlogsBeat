@@ -33,7 +33,10 @@ BlogBeat is a dynamic blog web application that allows users to explore engaging
 1. **Clone the Repository:**
    ```sh
    git clone [https://github.com/your-username/your-repo.git](https://github.com/jahidulkanchan/BlogsBeat.git)
-   cd your-repo
+    cd server
+   npm start
+   cd client
+   npm start
    ```
 2. **Install Dependencies:**
    ```sh
