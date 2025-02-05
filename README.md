@@ -3,7 +3,7 @@
 ## Project Overview
 BlogBeat is a dynamic blog web application that allows users to explore engaging content across categories like Technology, Travel, Sports, Entertainment, and Lifestyle. Users can add their own blogs, manage existing ones, and curate a personalized wishlist of their favorite posts. The platform aims to inspire, educate, and entertain while fostering a community where everyone can share and discover meaningful content.
 
-## Screenshot
+## Project Image
 ![BlogBeat Screenshot](https://raw.githubusercontent.com/jahidulkanchan/BlogsBeat/refs/heads/main/client-site/public/project2.png)
 
 ## Technologies Used
