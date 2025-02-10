@@ -5,6 +5,8 @@ import BlogCard from "../components/BlogCard";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { useLoaderData } from "react-router-dom";
+import { GrPowerReset } from "react-icons/gr";
+import { MdKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 
 const AllBlogs = () => {
   const countData = useLoaderData();
@@ -74,7 +76,7 @@ const AllBlogs = () => {
             onClick={handleResetFilter}
             className="py-2 px-4 w-fit border bg-white outline-none"
           >
-            Reset
+            <GrPowerReset />
           </button>
         </div>
         <div className="grid grid-cols-1 my-8 gap-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
@@ -123,9 +125,9 @@ const AllBlogs = () => {
           <div className="pagination flex justify-center gap-2 md:gap-5">
             <button
               onClick={() => currentPage > 0 && setCurrentPage(currentPage - 1)}
-              className="px-5 py-1 border border-primary text-primary hover:bg-darkPrimary hover:text-white"
+              className="pr-2 pl-1 flex gap-2 items-center py-1 border border-primary text-primary hover:bg-darkPrimary hover:text-white"
             >
-              Prev
+             <MdOutlineKeyboardDoubleArrowLeft /> Prev 
             </button>
             {pages.map((page, i) => (
               <button
@@ -143,9 +145,9 @@ const AllBlogs = () => {
                 currentPage < numberOfPages - 1 &&
                 setCurrentPage(currentPage + 1)
               }
-              className="px-5 py-1 border border-primary text-primary hover:bg-darkPrimary hover:text-white"
+              className="pl-3 pr-1 flex items-center gap-2 py-1 border border-primary text-primary hover:bg-darkPrimary hover:text-white"
             >
-              Next
+              Next <MdKeyboardDoubleArrowRight />
             </button>
           </div>
         )}

@@ -57,16 +57,16 @@ const Register = () => {
         </h2>
         <form
           onSubmit={handleSignUp}
-          className={`w-11/12 md:w-10/12 lg:w-8/12 py-8 flex flex-col justify-center items-center border space-y-4 shadow-md mx-auto mb-10 md:mb-0 min-h-[350px]`}
+          className={`w-11/12 md:w-10/12 lg:w-8/12 py-8 flex flex-col justify-center items-center border space-y-4 shadow-md md:shadow-xl mx-auto rounded-xl mb-10 md:mb-0 min-h-[350px]`}
         >
           <div className="grid gap-5 mx-5 sm:grid-cols-2">
             <div>
-              <label className=" mb-2 font-semibold" htmlFor="name">
+              <label className=" mb-2 font-medium" htmlFor="name">
                 Name:
               </label>
               <br />
               <input
-                className="p-2 w-full bg-slate-100 border outline-none"
+                className="p-2 w-full rounded-md bg-slate-100 border outline-none"
                 type="text"
                 placeholder="Your Name"
                 name="name"
@@ -74,11 +74,11 @@ const Register = () => {
               />
             </div>
             <div>
-              <label className=" mb-2 font-semibold" htmlFor="photo">
+              <label className=" mb-2 font-medium" htmlFor="photo">
                 Photo URL:
               </label>
               <input
-                className="p-2 w-full bg-slate-100 border outline-none"
+                className="p-2 w-full rounded-md bg-slate-100 border outline-none"
                 type="text"
                 placeholder="Photo URL"
                 name="photo"
@@ -86,11 +86,11 @@ const Register = () => {
               />
             </div>
             <div>
-              <label className=" mb-2 font-semibold" htmlFor="email">
+              <label className=" mb-2 font-medium" htmlFor="email">
                 Email Address:
               </label>
               <input
-                className="p-2 w-full bg-slate-100 border outline-none"
+                className="p-2 w-full rounded-md bg-slate-100 border outline-none"
                 type="email"
                 placeholder="Your Email"
                 name="email"
@@ -98,12 +98,12 @@ const Register = () => {
               />
             </div>
             <div>
-              <label className=" mb-2 font-semibold" htmlFor="password">
+              <label className=" mb-2 font-medium" htmlFor="password">
                 Password:
               </label>
               <div className="relative">
                 <input
-                  className="p-2 w-full bg-slate-100 border outline-none"
+                  className="p-2 w-full rounded-md bg-slate-100 border outline-none"
                   type={`${ishidden ? "password" : "text"}`}
                   placeholder="Password"
                   name="password"
@@ -121,7 +121,7 @@ const Register = () => {
             </div>
           </div><br />
           <div>
-            <button className="bg-secondary hover:shadow-lg duration-150 w-11/12 block mx-auto  px-5 py-3 mt-2 text-white">
+            <button className="bg-secondary rounded-md hover:shadow-lg duration-150 w-11/12 block mx-auto  px-5 py-3 mt-2 text-white">
               Register
             </button> 
             <p className="mt-5 text-center text-slate-500">

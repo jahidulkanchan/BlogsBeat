@@ -6,6 +6,7 @@ import {format} from 'date-fns'
 import { useState } from "react";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { MdOutlineArrowOutward } from "react-icons/md";
  
 // eslint-disable-next-line react/prop-types
 const BlogCard = ({ blog }) => {
@@ -70,8 +71,8 @@ const BlogCard = ({ blog }) => {
           </div>
           <p className="text-sm text-gray-700 mb-4 flex-grow">{shortDesc}</p>
           <div className="flex justify-between">
-            <Link onClick={()=> window.scrollTo(0,0)} to={`/blog/${_id}`} className="px-4 w-fit py-2 bg-white border border-secondary text-secondary hover:bg-secondary hover:text-white duration-100 rounded">
-              Details
+            <Link onClick={()=> window.scrollTo(0,0)} to={`/blog/${_id}`} className="px-3 w-fit py-1 bg-white flex items-center gap-2 border border-secondary text-secondary hover:bg-secondary hover:text-white duration-100 rounded">
+              Details <MdOutlineArrowOutward />
             </Link>
             <button onClick={()=>hanldeAddWishlist(_id)} className={`px-4 py-2 bg-secondary text-white rounded hover:bg-white border border-secondary hover:text-secondary duration-100`}>
               {loading && loadingId === _id ? 'Loading..' : 'Add to Wishlist'} 

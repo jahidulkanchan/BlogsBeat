@@ -4,6 +4,7 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import { MdOutlineLogout } from "react-icons/md";
 
 const Navbar = () => {
   const navigate = useNavigate()
@@ -113,10 +114,10 @@ const Navbar = () => {
                 style={{
                   textShadow: "1px 1px 1px rgba(0, 0, 0, 0.1)",
                 }}
-                 className="px-5 rounded-full shadow text-sm py-2 bg-secondary font-medium text-white">Log Out</button>
+                 className="px-3 flex items-center gap-2 rounded-full shadow text-sm py-2 bg-secondary font-medium text-white">Log Out <MdOutlineLogout className="text-lg" /></button>
               </div>
             ) : (
-              <div className={`${loading? 'opacity-0' : 'opacity-100'} flex gap-4 md:gap-8 font-semibold `}>
+              <div className={`${loading? 'opacity-0' : 'opacity-100'} flex gap-4 md:gap-8 font-medium `}>
                 <Link to="/login">Log In</Link>
                 <Link to="/register">Register</Link>
               </div>

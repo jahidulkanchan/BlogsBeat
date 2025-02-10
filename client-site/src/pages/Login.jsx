@@ -64,15 +64,15 @@ const Login = () => {
           </div>
            <form
           onSubmit={handleSignIn}
-          className={`col-span-12 md:col-span-7 w-full md:w-10/12 py-10 flex flex-col justify-center items-center border shadow-md mx-auto min-h-[350px]`}
+          className={`col-span-12 md:col-span-7 w-full rounded-xl md:w-10/12 py-10 flex flex-col justify-center items-center border shadow-md md:shadow-xl mx-auto min-h-[350px]`}
         >
           <div className="grid gap-5 mx-5 grid-cols-1">
             <div>
-              <label className=" mb-2 font-semibold" htmlFor="email">
+              <label className=" mb-2 font-medium" htmlFor="email">
                 Email Address:
               </label>
               <input
-                className="p-2 w-full bg-slate-100 border outline-none"
+                className="p-2 w-full rounded-md bg-slate-100 border outline-none"
                 type="email"
                 placeholder="Your Email"
                 name="email"
@@ -80,12 +80,12 @@ const Login = () => {
               />
             </div>
             <div>
-              <label className=" mb-2 font-semibold" htmlFor="password">
+              <label className=" mb-2 font-medium" htmlFor="password">
                 Password:
               </label>
               <div className="relative">
                 <input
-                  className="p-2 w-full bg-slate-100 border outline-none"
+                  className="p-2 w-full rounded-md bg-slate-100 border outline-none"
                   type="password"
                   placeholder="Password"
                   name="password"
@@ -94,7 +94,7 @@ const Login = () => {
             </div>
           </div>
           <div>
-            <button className="bg-secondary text-white duration-150 w-11/12 block mx-auto font-semibold px-5 py-3 mt-8 ">
+            <button className="bg-secondary rounded-md text-white duration-150 w-11/12 block mx-auto font-medium px-5 py-3 mt-8 ">
               Log In
             </button>
             {errorMessage && (

@@ -60,16 +60,16 @@ const AddBlog = () => {
         </h2>
         <form
           onSubmit={handleAddBlog}
-          className={`w-11/12 md:w-10/12 lg:w-8/12 py-8 flex flex-col justify-center items-center border space-y-4 shadow-md mx-auto min-h-[350px]`}
+          className={`w-11/12 md:w-10/12 lg:w-8/12 py-8 flex flex-col justify-center items-center border space-y-4 shadow-md mx-auto rounded-xl min-h-[350px]`}
         >
           <div className="grid gap-5 mx-5 sm:grid-cols-2">
             <div className="col-span-2 sm:col-span-1">
-              <label className=" mb-2 font-semibold" htmlFor="title">
+              <label className=" mb-2 font-medium" htmlFor="title">
                 Blog Title:
               </label>
               <br />
               <input
-                className="p-2 w-full bg-slate-100 border outline-none"
+                className="p-2 rounded-md w-full bg-slate-100 border outline-none"
                 type="text"
                 placeholder="Title of blog"
                 name="title"
@@ -77,11 +77,11 @@ const AddBlog = () => {
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
-              <label className=" mb-2 font-semibold" htmlFor="category">
+              <label className=" mb-2 font-medium" htmlFor="category">
                 Category:
               </label>
               <select
-                className="p-2 w-full bg-slate-100 border outline-none"
+                className="p-2 rounded-md w-full bg-slate-100 border outline-none"
                 name="category"
                 id="category"
                 defaultValue=""
@@ -98,12 +98,12 @@ const AddBlog = () => {
               </select>
             </div>
             <div className="col-span-2">
-              <label className=" mb-2 font-semibold" htmlFor="photo">
+              <label className=" mb-2 font-medium" htmlFor="photo">
                 Image URL:
               </label>
               <br />
               <input
-                className="p-2 w-full bg-slate-100 border outline-none"
+                className="p-2 w-full rounded-md bg-slate-100 border outline-none"
                 type="text"
                 placeholder="Blog Image URL"
                 name="photo"
@@ -111,12 +111,12 @@ const AddBlog = () => {
               />
             </div>
             <div className="col-span-2">
-              <label className="mb-2 font-semibold" htmlFor="shortDesc">
+              <label className="mb-2 font-medium" htmlFor="shortDesc">
                 Short Description:
               </label>
               <br />
               <textarea
-                className="p-2 w-full h-[50px] md:h-[70px] bg-slate-100 border outline-none"
+                className="p-2 w-full rounded-md h-[50px] md:h-[70px] bg-slate-100 border outline-none"
                 name="shortDesc"
                 id="shortDesc"
                 placeholder="Short description"
@@ -124,12 +124,12 @@ const AddBlog = () => {
               ></textarea>
             </div>
             <div className="col-span-2">
-              <label className=" mb-2 font-semibold" htmlFor="longDesc">
+              <label className=" mb-2 font-medium" htmlFor="longDesc">
                 Long Description:
               </label>
               <br />
               <textarea
-                className="p-2 w-full h-[100px] md:h-[150px] bg-slate-100 border outline-none"
+                className="p-2 w-full rounded-md h-[100px] md:h-[150px] bg-slate-100 border outline-none"
                 name="longDesc"
                 id="longDesc"
                 placeholder="Long Description"
