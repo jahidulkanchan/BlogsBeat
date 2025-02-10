@@ -1,17 +1,56 @@
-#### Project Name: BlogBeat
-#### Purpose of this Application : 
-This blog web application allows users to explore engaging content across categories like Technology, Travel, Sports, Entertainment, and Lifestyle. Users can add their own blogs, manage existing ones, and curate a personalized wishlist of their favorite posts. The platform aims to inspire, educate, and entertain while fostering a community where everyone can share and discover meaningful content.
-#### Website URL: [https://blogsbeat.netlify.app](https://blogsbeat.netlify.app/)
-#### Features: 
+# BlogBeat(Blog Sharing Platform)
+
+## Project Overview
+BlogBeat is a dynamic blog web application that allows users to explore engaging content across categories like Technology, Travel, Sports, Entertainment, and Lifestyle. Users can add their own blogs, manage existing ones, and curate a personalized wishlist of their favorite posts. The platform aims to inspire, educate, and entertain while fostering a community where everyone can share and discover meaningful content.
+
+## Project Image
+![BlogBeat Screenshot](https://raw.githubusercontent.com/jahidulkanchan/BlogsBeat/refs/heads/main/client-site/public/project2.png)
+
+## Technologies Used
+- React.js
+- Node.js
+- Express.js
+- MongoDB
+- Tailwind CSS
+- Vercel (Backend Hosting)
+
+## Core Features
 - User-Generated Content
 - Personalized Wishlist
-- Title base search bar 
-- Filter by category
+- Title-Based Search Bar
+- Filter by Category
 - Fully Secure Data Storage
-#### Useses npm Pakages:
-- Tanstack Table
-- Framer motion
-- react-countup
-- react-faq-component
-- date-fns
-- axios
+
+## Dependencies Used
+- `@tanstack/react-table`
+- `framer-motion`
+- `react-countup`
+- `react-faq-component`
+- `date-fns`
+- `axios`
+
+## How to Run the Project Locally
+1. **Clone the Repository:**
+   ```sh
+   git clone [https://github.com/your-username/your-repo.git](https://github.com/jahidulkanchan/BlogsBeat.git)
+    cd server
+   npm start
+   cd client
+   npm start
+   ```
+2. **Install Dependencies:**
+   ```sh
+   npm install
+   ```
+3. **Set Up Environment Variables:**
+   - Create a `.env` file in the root directory.
+   - Add required environment variables as specified.
+4. **Run the Development Server:**
+   ```sh
+   npm run dev
+   ```
+5. **Access the Application:**
+   - Open `http://localhost:3000` in your browser.
+
+## Live Project Link
+[BlogBeat Live Website](https://blogsbeat.netlify.app/)
