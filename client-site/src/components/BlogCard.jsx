@@ -80,7 +80,7 @@ const BlogCard = ({ blog }) => {
 
             <button
               onClick={() => hanldeAddWishlist(_id)}
-              className={`px-4 py-2 bg-secondary text-white rounded hover:bg-white border border-secondary hover:text-secondary duration-100 dark:bg-secondary dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-600`}>
+              className={`px-4 py-1.5 bg-secondary text-white rounded hover:bg-white border border-secondary hover:text-secondary duration-100 dark:bg-secondary dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-600`}>
               {loading && loadingId === _id ? 'Loading..' : 'Add to Wishlist'}
             </button>
           </div>
