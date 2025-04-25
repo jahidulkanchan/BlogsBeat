@@ -63,7 +63,7 @@ const BlogCard = ({ blog }) => {
           <div className="flex justify-between gap-3 items-center">
             <div>
               <p className="date text-gray-500 text-[14px] my-3 dark:text-gray-400">{addDate}</p>
-              <h2 className="text-xl font-semibold my-2 dark:text-white">{title}</h2>
+              <h2 className="text-xl font-medium md:font-semibold my-2 dark:text-white">{title}</h2>
             </div>
             <p className="text-sm bg-primary bg-opacity-90 rounded-full px-5 py-1 text-white mb-2 dark:bg-secondary dark:bg-opacity-80">{category}</p>
           </div>
