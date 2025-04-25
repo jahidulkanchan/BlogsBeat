@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         <div className="col-span-2">
         <Link onClick={()=> window.scrollTo(0,0)} className={`logo flex items-center ${isdark ? 'text-white' : ''}`} to="/">
-             <img className="h-[30px] md:h-[40px] mr-2" src='/logo.png' alt="logo" />
+             <img className="h-[30px] md:h-[40px] mr-2 dark:invert" src='/logo.png' alt="logo" />
               <h3 className="text-xl md:text-2xl font-medium md:font-semibold">
                 Blog<span 
                 style={{
