@@ -123,7 +123,7 @@ const AllBlogs = () => {
           <div className="pagination flex justify-center gap-2 pb-5 md:gap-5">
             <button
               onClick={() => currentPage > 0 && setCurrentPage(currentPage - 1)}
-              className="pr-2 pl-1 flex gap-2 items-center py-1 border border-primary text-primary hover:bg-darkPrimary hover:text-white dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white">
+              className="pr-2 pl-1 flex gap-2 items-center py-1.5 border border-primary text-primary hover:bg-darkPrimary hover:text-white dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white">
               <MdOutlineKeyboardDoubleArrowLeft className="dark:text-gray-300" />
               <span>Prev</span>
             </button>
