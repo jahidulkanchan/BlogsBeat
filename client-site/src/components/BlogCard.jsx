@@ -59,7 +59,7 @@ const BlogCard = ({ blog }) => {
         </PhotoProvider>
 
         {/* Main card design */}
-        <div className="px-4 pt-1 pb-5 flex flex-col flex-grow">
+        <div className="px-4 pt-1.5 pb-5 flex flex-col flex-grow">
           <div className="flex justify-between gap-3 items-center">
             <div>
               <p className="date text-gray-500 text-[14px] my-3 dark:text-gray-400">{addDate}</p>
