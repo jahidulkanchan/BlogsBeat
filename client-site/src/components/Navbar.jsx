@@ -144,7 +144,8 @@ const Navbar = () => {
                   </button>
                 </div>
               ) : (
-                <div className={`${loading ? 'opacity-0' : 'opacity-100'} flex gap-4 md:gap-8 font-medium dark:text-white`}>
+                <div className={`${loading ? 'opacity-0' : 'opacity-100'} flex items-center gap-4 md:gap-8 font-medium dark:text-white`}>
+                  <ThemeToggle />
                   <Link to="/login" className="dark:hover:text-gray-300">
                     Log In
                   </Link>

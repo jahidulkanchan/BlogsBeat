@@ -1,16 +1,16 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useAuth } from "../hooks/useAuth";
-import { MdDeleteForever, MdOutlineSettings, MdTitle } from "react-icons/md";
-import { Link } from "react-router-dom";
-import useAxiosSecure from "../hooks/useAxiosSecure";
-import { format } from "date-fns";
-import { BiCategoryAlt } from "react-icons/bi";
-import { AiOutlineCalendar } from "react-icons/ai";
-import { FaHashtag } from "react-icons/fa";
-import toast from "react-hot-toast";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useAuth } from '../hooks/useAuth';
+import { MdDeleteForever, MdOutlineSettings, MdTitle } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import useAxiosSecure from '../hooks/useAxiosSecure';
+import { format } from 'date-fns';
+import { BiCategoryAlt } from 'react-icons/bi';
+import { AiOutlineCalendar } from 'react-icons/ai';
+import { FaHashtag } from 'react-icons/fa';
+import toast from 'react-hot-toast';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const Wishlist = () => {
   const axiosSecure = useAxiosSecure();
@@ -39,14 +39,10 @@ const Wishlist = () => {
             onClick={() => {
               handleWishlistDelete(id);
               toast.dismiss(t.id);
-            }}
-          >
+            }}>
             Confirm
           </button>
-          <button
-            className="text-sm text-white bg-secondary px-4 py-2"
-            onClick={() => toast.dismiss(t.id)}
-          >
+          <button className="text-sm text-white bg-secondary px-4 py-2" onClick={() => toast.dismiss(t.id)}>
             Cancel
           </button>
         </div>
@@ -55,12 +51,10 @@ const Wishlist = () => {
   };
 
   const handleWishlistDelete = async (id) => {
-    const { data } = await axios.delete(
-      `${import.meta.env.VITE_api_url}/wishlist/${id}`
-    );
+    const { data } = await axios.delete(`${import.meta.env.VITE_api_url}/wishlist/${id}`);
     if (data.deletedCount > 0) {
       const remaining = wishlist?.filter((item) => item._id !== id);
-      toast.success("Deleted successfully!");
+      toast.success('Deleted successfully!');
       setWishlist(remaining);
     }
   };
@@ -72,40 +66,36 @@ const Wishlist = () => {
           <span>Wishlist </span>
           <span
             style={{
-              textShadow: "0px 0px 2px rgba(0, 0, 0, 0.1)",
+              textShadow: '0px 0px 2px rgba(0, 0, 0, 0.1)',
             }}
-            className="text-secondary"
-          >
+            className="text-secondary">
             Dashboard
           </span>
         </h2>
 
         <div className="w-full overflow-x-auto">
-          <table className="border-collapse border text-center border-gray-200 w-full">
-            <thead className="bg-primary bg-opacity-95 text-white">
+          <table className="border-collapse border text-center border-gray-200 w-full bg-white dark:bg-gray-800">
+            <thead className="bg-primary bg-opacity-95 text-white dark:bg-primary dark:bg-opacity-95">
               <tr>
                 <th className="border font-medium px-2 py-2">
                   <FaHashtag className="inline-block mr-1 text-lg mb-1" />
                 </th>
                 <th className="border font-medium px-2 py-2">
-                  <MdTitle className="inline-block mr-1 text-lg mb-1" /> Blog
-                  Title
+                  <MdTitle className="inline-block mr-1 text-lg mb-1" /> Blog Title
                 </th>
                 <th className="border font-medium px-2 py-2">
-                  <BiCategoryAlt className="inline-block mr-1 text-lg mb-1" />{" "}
-                  Category
+                  <BiCategoryAlt className="inline-block mr-1 text-lg mb-1" /> Category
                 </th>
                 <th className="border font-medium px-2 py-2">
                   <AiOutlineCalendar className="inline-block mr-1 text-lg mb-1" />
                   Mark Date
                 </th>
                 <th className="border font-medium px-2 py-2">
-                  <MdOutlineSettings className="inline-block mr-1 text-lg mb-1" />{" "}
-                  Actions
+                  <MdOutlineSettings className="inline-block mr-1 text-lg mb-1" /> Actions
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-slate-50">
+            <tbody className="bg-slate-50 dark:bg-gray-700">
               {loading
                 ? Array.from({ length: 4 }).map((_, i) => (
                     <tr key={i}>
@@ -127,31 +117,19 @@ const Wishlist = () => {
                     </tr>
                   ))
                 : wishlist?.map((item, i) => (
-                    <tr key={item._id}>
-                      <td className="border border-gray-300 py-2 px-2">
-                        {i + 1}
-                      </td>
-                      <td className="border border-gray-300 py-2 px-2">
-                        {item.title}
-                      </td>
-                      <td className="border border-gray-300 py-2 px-2">
-                        {item.category}
-                      </td>
-                      <td className="border border-gray-300 py-2 px-2">
-                        {format(new Date(item?.addDate), "P")}
-                      </td>
+                    <tr key={item._id} className="hover:bg-gray-50 dark:hover:bg-gray-600">
+                      <td className="border border-gray-300 py-2 px-2">{i + 1}</td>
+                      <td className="border border-gray-300 py-2 px-2">{item.title}</td>
+                      <td className="border border-gray-300 py-2 px-2">{item.category}</td>
+                      <td className="border border-gray-300 py-2 px-2">{format(new Date(item?.addDate), 'P')}</td>
                       <td className="border border-gray-300 py-2 px-2">
                         <div className="flex items-center justify-center gap-3">
-                          <Link
-                            to={`/blog/${item.id}`}
-                            className="bg-primary bg-opacity-95 text-white border px-3 py-1 rounded"
-                          >
+                          <Link to={`/blog/${item.id}`} className="bg-primary text-white border px-3 py-1 rounded hover:bg-opacity-80">
                             <span>Details</span>
                           </Link>
                           <button
                             onClick={() => handleDelete(item._id)}
-                            className="text-secondary bg-white px-2 flex items-center gap-1 border py-1 rounded"
-                          >
+                            className="text-secondary bg-white dark:bg-gray-800 px-2 flex items-center gap-1 border py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
                             <span className="text-xl">
                               <MdDeleteForever />
                             </span>
@@ -162,7 +140,7 @@ const Wishlist = () => {
                     </tr>
                   ))}
             </tbody>
-            { wishlist.length === 0 && <p className="py-5 absolute left-0 text-center w-full text-lg">Your Wishlist is Empty</p>}
+            {wishlist.length === 0 && <p className="py-5 absolute left-0 text-center w-full text-lg text-gray-500 dark:text-gray-300">Your Wishlist is Empty</p>}
           </table>
         </div>
       </section>
@@ -171,4 +149,3 @@ const Wishlist = () => {
 };
 
 export default Wishlist;
-
