@@ -28,7 +28,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <section className="shadow fixed left-0 w-full z-20 top-0 backdrop-blur bg-gray-50 bg-opacity-15 dark:bg-gray-900 dark:bg-opacity-90 px-5 py-5">
+      <section className="shadow fixed left-0 w-full z-20 top-0 backdrop-blur bg-gray-50 bg-opacity-15 dark:bg-gray-900 dark:bg-opacity-90 px-5 py-4">
         <div className="container px-2 md:px-5 mx-auto">
           <nav className="flex justify-between items-center">
             <div>
