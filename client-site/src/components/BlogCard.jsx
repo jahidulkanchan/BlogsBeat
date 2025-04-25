@@ -61,6 +61,7 @@ const BlogCard = ({ blog }) => {
           />
         </PhotoView>
        </PhotoProvider>
+        {/*    main card design     */}
         <div className="px-4 pt-1 pb-5 flex flex-col flex-grow">
           <div className="flex justify-between gap-3 items-center">
             <div>
