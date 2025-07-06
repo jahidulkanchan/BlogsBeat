@@ -113,12 +113,13 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="user-info flex gap-5 items-center">
+              {user && <ThemeToggle />}
+
               {user ? (
                 <div
                   className={`flex-col bg-white lg:bg-transparent absolute lg:static w-full lg:fit left-0 top-[75px] py-5 lg:py-0 gap-5 lg:flex-row justify-center lg:gap-4 items-center ${
                     !isHidden ? 'flex' : 'hidden lg:flex'
                   } `}>
-                  <ThemeToggle />
                   <div className="flex justify-center flex-col items-center">
                     <img
                       referrerPolicy="no-referrer"
@@ -149,14 +150,13 @@ const Navbar = () => {
                   <Link to="/login" className="dark:hover:text-gray-300">
                     Log In
                   </Link>
-                  <Link to="/register" className="dark:hover:text-gray-300">
+                  <Link to="/register" className="dark:hover:text-gray-300 hidden md:block">
                     Register
                   </Link>
                 </div>
               )}
             </div>
             <div className="bar-icon flex items-center gap-4 ml-1 z-20 cursor-pointer lg:hidden text-xl">
-              <ThemeToggle />
               {user && (
                 <div title="User Details" onClick={handleToggleUser} className={`w-8 border overflow-hidden rounded-full bg-slate-50 inline-block lg:hidden dark:border-gray-600`}>
                   <img className="min-h-[30px]" src={user?.photoURL} alt="" />
